@@ -1,0 +1,57 @@
+<!--
+  Generated template for the UpdatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="ltpurple">
+    <ion-title>update</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="picture">
+     <ion-list >
+        <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+              <h1 align:center >Update Information</h1>
+               </ion-card-title >
+                <ion-item>
+                <ion-label>Name :</ion-label>
+                <ion-input type="text" #name  value="{{empName}}"></ion-input>
+                </ion-item>
+                <ion-item>
+                 <ion-label>Surname :</ion-label>
+                <ion-input type="text" #surname value="{{empSurname}}"></ion-input>
+                </ion-item>
+                <ion-item>
+                <ion-label>Role :</ion-label>
+                <ion-input type="text" #role value="{{empRole}}"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                <ion-label>Id :</ion-label>
+                <ion-input type="text" #id value="{{empId}}"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                <ion-label>Username :</ion-label>
+                <ion-input type="text" #username value="{{empUser}}"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                <ion-label>Password :</ion-label>
+                <ion-input type="password" #password value="{{empPass}}"></ion-input>
+                </ion-item>
+
+                <input type="file"  accept="image/png, image/jpeg" (change)="insertImage($event)"><br>
+
+                <button ion-button round (click)="update(name.value,surname.value,role.value,id.value,username.value,password.value,url)">Update</button>
+            </ion-card-content>
+          </ion-card>
+      </ion-list>
+</ion-content>
